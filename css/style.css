@@ -1,0 +1,219 @@
+body{
+    background-color: #fff;
+    color: #212121;
+    font-size: 14px;
+    font-family: "Open Sans";
+    position: relative;
+}
+header{
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+    width: 100%;
+    min-height: 80px;
+}
+.main_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.header_logo{
+    flex-grow: 1;
+    flex-basis: 300px;
+    text-align: left;
+
+}
+.header_logo_main{
+    font-size: 38px;
+    font-family: "VivaldiD CL";
+    line-height: 1em;
+    margin: 0;
+}
+.header_logo_text{
+    margin: 0;
+    padding-left: 15px;
+}
+.header_navbar{
+    flex-grow: 1;
+    flex-basis: 300px;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.header_navbar a{
+    color: #212121;
+    font-size: 16px;
+}
+.header_navbar a:hover{
+    color: #212121;
+    text-decoration: none;
+}
+.header_navbar a:active, .header_navbar a:focus{
+    text-decoration: none;
+    border-top: 2px solid #ffba31;
+    outline:none;
+}
+.first_block_slider img{
+    width: 100vw;
+    display: block;
+}
+.first_block_slider{
+    overflow: hidden;
+    position: relative;
+    height: 85vh;
+}
+.first_block_slider ul {
+    list-style:none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.slider_text{
+    width: 33vw;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 0;
+    left: 60%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+.slider_text div{
+    font-size: 42px;
+    font-family: "Roboto";
+    color: #212121;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+.slider_text a{
+    display: block;
+    width: 18vw;
+    height: 50px;
+    text-align: center;
+    border: 2px solid #212121;
+    font-size: 24px;
+    font-family: "Roboto";
+    color: #212121;
+    padding-top: 5px;
+    margin-top: 30px;
+}
+.slider_text a:hover, .slider_text a:focus, .slider_text a:active{
+    text-decoration: none;
+    outline: none;
+}
+@-webkit-keyframes animation_slides {
+    0% {
+        opacity:0;
+    }
+    6% {
+        opacity:1;
+    }
+    24% {
+        opacity:1;
+    }
+    30% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@-moz-keyframes animation_slides {
+    0% {
+        opacity:0;
+    }
+    6% {
+        opacity:1;
+    }
+    24% {
+        opacity:1;
+    }
+    30% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+.slider{
+    opacity:0;
+    position:absolute;
+    top:0;
+
+    -webkit-animation-name: animation_slides;
+    -webkit-animation-duration: 24s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation-name: animation_slides;
+    -moz-animation-duration: 24s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-delay: 0s;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+}
+.slider:nth-child(2), .slider:nth-child(2) div{
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+}
+.slider:nth-child(3), .slider:nth-child(3) div{
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+}
+.slider:nth-child(4), .slider:nth-child(4) div{
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+}
+
+h2{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.first_page_icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+}
+.first_page_icons_col{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.first_page_icons_col div{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: rgba(255, 209, 0, 0.9);
+    margin-right: auto;
+    margin-left: auto;
+    color: #fff;
+    font-size: 56px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.icon-spa-ointment-with-flower{
+    padding-left: 5px;
+}
+.first_page_icons_title{
+    display: block;
+    height: 30px;
+    margin-bottom: 30px;
+}
