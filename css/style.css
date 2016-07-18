@@ -368,3 +368,38 @@ h4{
     flex-basis: 300px;
     flex-grow: 1;
 }
+.comments_all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.comments_all div{
+    flex-basis: 450px;
+    box-shadow: 2px 2px 8px 3px rgba(255, 186, 49, 0.8);
+    padding: 20px;
+    font-size: 12px;
+    line-height: 1.2em;
+    margin: 30px;
+
+}
+.comments_all div img{
+    width: 120px;
+    height: 100px;
+
+}
+.comment_one_img, .comment_three_img{
+    float:left;
+    padding-right: 15px;
+}
+.comment_two_img, .comment_four_img{
+    float: right;
+    padding-left: 15px;
+}
+.comment_name{
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.comment_one p:last-child{
+    float:right;
+}
