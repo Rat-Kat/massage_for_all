@@ -180,7 +180,7 @@ header{
 }
 
 h2{
-    margin-top: 40px;
+    margin-top: 60px;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -188,13 +188,13 @@ h2{
 .first_page_icons{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     text-align: center;
 
 }
 .first_page_icons_col{
-    margin-right: 10px;
-    margin-left: 10px;
+    flex-basis: 230px;
 }
 
 .first_page_icons_col div{
@@ -207,7 +207,7 @@ h2{
     color: #fff;
     font-size: 56px;
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .icon-spa-ointment-with-flower{
     padding-left: 5px;
@@ -215,5 +215,137 @@ h2{
 .first_page_icons_title{
     display: block;
     height: 30px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 15px;
+}
+.first_page_icons_text{
+    font-size: 12px;
+}
+.services_block{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 50vh;
+}
+.services_img{
+    flex-basis: 350px;
+    flex-grow: 1;
+
+}
+.services_text{
+    flex-basis: 350px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Roboto";
+}
+.services_title{
+    font-size: 30px;
+    color:#212121;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.services_btn{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: inherit;
+    border: 1px solid #212121;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+}
+.services_btn:focus, .services_btn:active{
+    outline: none;
+}
+.services_massage{
+    background-color: #ffdfb9;
+}
+.services_figure_correction{
+    background-color: #cdcae6;
+}
+.services_spa{
+    background-color: #eaecfe;
+}
+.services_depilation{
+    background-color: #f1c9c9;
+}
+h4{
+    margin-top: 30px;
     margin-bottom: 30px;
+    text-align: center;
+}
+.services_price{
+    width: 55vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    box-shadow: 2px 4px 7px 3px rgba(33, 33, 33, 0.3);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.services_price div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.services_price div div{
+    flex-basis: 120px;
+    flex-grow: 1;
+    min-height: 35px;
+    text-align: left;
+}
+.services_price div div:first-child{
+    flex-basis: 300px;
+    flex-grow: 2;
+}
+.services_price_alone{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    box-shadow: 2px 4px 7px 3px rgba(33, 33, 33, 0.3);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.services_price_value{
+    flex-basis: 400px;
+    flex-grow: 1;
+}
+.services_price_value span{
+    margin-right: 60px;
+}
+.services_duration{
+    flex-basis: 400px;
+    flex-grow: 1;
+    text-align: right;
+}
+.services_duration span:first-child{
+    margin-right: 60px;
+}
+#services_depilation .services_price{
+    width: 30vw;
+}
+#services_depilation .services_price div span{
+    flex-basis: 100px;
+    min-height: 35px;
+    text-align: right;
+    padding-top: 7px;
+}
+#services_depilation .services_price div span:first-child{
+    flex-basis: 100px;
+    flex-grow: 1;
+    text-align: left;
 }
