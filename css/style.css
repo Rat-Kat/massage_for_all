@@ -403,3 +403,50 @@ h4{
 .comment_one p:last-child{
     float:right;
 }
+#faq{
+    margin-bottom: 40px;
+}
+.faq_question{
+    font-weight: bold;
+}
+.contacts_all{
+    height: 250px;
+    background: url("../img/footer.jpg") no-repeat 100%;
+    background-size: cover;
+}
+.contacts_all_fon{
+    background-color: rgba(255,255, 255, 0.5);
+    height: 100%;
+    padding-top: 20px;
+}
+.contacts_all_fon .container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+}
+.contacts_all_fon .container div{
+    flex-grow: 1;
+
+}
+.contacts_phones{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.contacts_text{
+    width: 60px;
+}
+.contacts_socials a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #c7c5c8;
+    font-size: 20px;
+    color: #fff;
+    margin-left: 15px;
+    padding-top: 2px;
+}
+.contacts_socials a:active, .contacts_socials a:focus, .contacts_socials a:visited{
+    outline:none;
+}
