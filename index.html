@@ -10,6 +10,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/animation.css" rel="stylesheet">
     <link href="css/fontello.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/slick-theme.css"/>
     <link href="css/style.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
@@ -478,10 +480,15 @@
         <img src="img/gallery/gallery_img_10.jpg" data-highres="img/gallery/big/gallery_img_10.jpg" class="img-responsive img-width" alt="">
         <img src="img/gallery/gallery_img_11.jpg" data-highres="img/gallery/big/gallery_img_11.jpg" class="img-responsive img-height" alt="">
         <img src="img/gallery/gallery_img_12.jpg" data-highres="img/gallery/big/gallery_img_12.jpg" class="img-responsive img-height" alt="">
-        <div class="clear"></div>
     </div>
     <h4>Дипломы и сертификаты</h4>
     <div class="about_diploms">
+        <img src="img/d3.jpg" class="img-responsive" alt="">
+        <img src="img/d4.jpg" class="img-responsive" alt="">
+        <img src="img/d5.jpg" class="img-responsive" alt="">
+        <img src="img/d6.jpg" class="img-responsive" alt="">
+        <img src="img/d7.jpg" class="img-responsive" alt="">
+        <img src="img/d5.jpg" class="img-responsive" alt="">
 
     </div>
 </section>
@@ -583,12 +590,48 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.nav.js"></script>
 <script src="js/zoomwall.js"></script>
+<script src="js/slick.min.js"></script>
+
+
 <script>
     $(document).ready(function() {
         $('#header_nav').onePageNav({
             scrollSpeed: 2500
         });
         zoomwall.create(document.getElementById('zoomwall'), true);
+
+        $('.about_diploms').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
     });
 </script>
 </body>

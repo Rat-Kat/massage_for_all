@@ -434,9 +434,7 @@ h4{
 #zoomwall.lightbox img.active {
     opacity: 1;
 }
-.clear {
-    clear: both;
-}
+
 .gp-gallery-picture-zoom {
     border: none;
     margin: 0;
@@ -449,7 +447,11 @@ h4{
 .gp-gallery-picture-hover {
     box-shadow: none;
 }
-
+.about_diploms img{
+    width: 150px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 .comments_all{
     display: flex;
     justify-content: center;
