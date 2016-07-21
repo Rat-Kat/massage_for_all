@@ -15,7 +15,7 @@ header{
     left: 0;
     overflow: hidden;
     z-index: 1000;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.8);
     width: 100vw;
 }
 .main_header{
@@ -68,15 +68,17 @@ ul{
     text-decoration: none;
     border-top: 3px solid #ffba31;
     outline:none;
-    background-color: #fff;
+    background-color: inherit;
     padding-top: 7px;
 }
 a:focus, a:visited, a:hover{
     outline:none;
 }
 .nav > li > a:hover,
-.nav > li > a:focus {
-    background-color: #fff;
+.nav > li > a:focus,
+.nav > li > a:visited,
+.nav > li > a:active {
+    background-color: inherit;
 }
 .first_block_slider img{
     width: 100vw;
@@ -252,6 +254,14 @@ h2{
     display: flex;
     flex-wrap: wrap;
     min-height: 50vh;
+}
+.panel{
+    margin: 0;
+    border: none;
+    box-shadow: none;
+}
+.panel-group .panel + .panel{
+    margin: 0;
 }
 .services_img{
     flex-basis: 350px;

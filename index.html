@@ -50,28 +50,28 @@
                 <img src="img/slider_massage.jpg" class="img-responsive" alt="massage">
                 <div class="slider_text container">
                     <div>Массаж</div>
-                    <a href="#massage">Узнать больше</a>
+                    <a href="#services">Узнать больше</a>
                 </div>
             </li>
             <li class="slider">
                 <img src="img/slider_spa.jpg" class="img-responsive" alt="spa">
                 <div class="slider_text container">
                     <div>SPA процедуры</div>
-                    <a href="#spa">Узнать больше</a>
+                    <a href="#services">Узнать больше</a>
                 </div>
             </li>
             <li class="slider">
                 <img src="img/slider_sugaring.jpg" class="img-responsive" alt="sugaring">
                 <div class="slider_text container">
                     <div>Шугаринг</div>
-                    <a href="#sugaring">Узнать больше</a>
+                    <a href="#services">Узнать больше</a>
                 </div>
             </li>
             <li class="slider">
                 <img src="img/slider_figure_correction.jpg" class="img-responsive" alt="figure correction">
                 <div class="slider_text container">
                     <div>Коррекция фигуры</div>
-                    <a href="#figure_correction">Узнать больше</a>
+                    <a href="#services">Узнать больше</a>
                 </div>
             </li>
         </ul>
@@ -105,16 +105,16 @@
 
 <section id="services">
     <h2>Наши услуги и цены</h2>
-    <div id="accordion" role="tablist" aria-multiselectable="true">
-        <div id="massage" role="tab">
+    <div class="panel-group" id="accordion" aria-multiselectable="true">
+        <div id="massage" class="panel">
             <div class="services_block">
                 <img src="img/services_massage.jpg" class="services_img img-responsive" alt="woman in massage">
                 <div class="services_massage services_text">
                     <span class="services_title">Классический массаж</span>
-                    <button class="services_btn" type="button" data-toggle="collapse" data-target="#services_massage" aria-expanded="false" aria-controls="services_massage">Подробнее</button>
+                    <button class="services_btn" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#services_massage" aria-expanded="false">Подробнее</button>
                 </div>
             </div>
-            <div id="services_massage" class="container" role="tabpanel" aria-labelledby="massage">
+            <div id="services_massage" class="container collapse" role="tabpanel" aria-labelledby="massage">
                 <h4>Общеукрепляющий классический массаж</h4>
                 <p>Выполняется с применением классических массажных техник. Снимает усталость, устраняет застойные явления и болевой синдром. Улучшает общее состояние организма. </p>
                 <div class="services_price">
@@ -253,15 +253,15 @@
             </div>
         </div>
 
-        <div id="figure_correction" role="tab">
+        <div id="figure_correction" class="panel">
             <div class="services_block">
                 <div class="services_figure_correction services_text">
                     <span class="services_title">Коррекция фигуры</span>
-                    <button class="services_btn" type="button" data-toggle="collapse" data-target="#services_figure_correction" aria-expanded="false" aria-controls="services_figure_correction">Подробнее</button>
+                    <button class="services_btn" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#services_figure_correction" aria-expanded="false" aria-controls="services_figure_correction">Подробнее</button>
                 </div>
                 <img src="img/services_figure_correction.jpg" class="services_img img-responsive" alt="figure_correction">
             </div>
-            <div id="services_figure_correction" class="container" role="tabpanel" aria-labelledby="figure_correction">
+            <div id="services_figure_correction" class="container collapse" role="tabpanel" aria-labelledby="figure_correction">
                 <h4>Антицеллюлитный Вакуумный Массаж</h4>
                 <p>Аппаратный массаж. Направлен на лечение целлюлита (в комплексе применяемых методов борьбы с избыточным весом) моделирование контуров тела, лечение дряблой атоничной кожи. Под воздействием ваккума, массаж позволяет разблокировать лимфатическую систему тканей, активизировать метаболические процессы в коже, повысить выработку эластина и коллагена, ускорить процесс липолиза (расщепления жиров)</p>
                 <div class="services_price">
@@ -336,15 +336,15 @@
             </div>
         </div>
 
-        <div id="spa" role="tab">
+        <div id="spa" class="panel">
             <div class="services_block">
                 <img src="img/services_spa.jpg" class="services_img img-responsive" alt="spa">
                 <div class="services_spa services_text">
                     <span class="services_title">Spa процедуры</span>
-                    <button class="services_btn" type="button" data-toggle="collapse" data-target="#services_spa" aria-expanded="false" aria-controls="services_spa">Подробнее</button>
+                    <button class="services_btn" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#services_spa" aria-expanded="false" aria-controls="services_spa">Подробнее</button>
                 </div>
             </div>
-            <div id="services_spa" class="container" role="tabpanel" aria-labelledby="spa">
+            <div id="services_spa" class="container  collapse" role="tabpanel" aria-labelledby="spa">
             <h4>Скрабирование</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa deserunt earum magni nobis odio, sint temporibus ut! Dicta dolor ea labore nulla porro, provident quaerat reprehenderit rerum saepe veniam</p>
             <div class="services_price">
@@ -390,15 +390,15 @@
         </div>
     </div>
 
-        <div id="sugaring" role="tab">
+        <div id="sugaring" class="panel">
             <div class="services_block">
                 <div class="services_depilation services_text">
                     <span class="services_title">Эпиляция</span>
-                    <button class="services_btn" type="button" data-toggle="collapse" data-target="#services_depilation" aria-expanded="false" aria-controls="services_depilation">Подробнее</button>
+                    <button class="services_btn" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#services_depilation" aria-expanded="false" aria-controls="services_depilation">Подробнее</button>
                 </div>
                 <img src="img/services_depilation.jpg" class="services_img img-responsive" alt="sugaring">
             </div>
-            <div id="services_depilation" class="container" role="tabpanel" aria-labelledby="depilation">
+            <div id="services_depilation" class="container collapse" role="tabpanel" aria-labelledby="depilation">
                 <h4>Восковая Эпиляция</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa deserunt earum magni nobis odio, sint temporibus ut! Dicta dolor ea labore nulla porro, provident quaerat reprehenderit rerum saepe veniam</p>
                 <div class="services_price">
@@ -572,7 +572,10 @@
 <script src="js/jquery.nav.js"></script>
 <script>
     $(document).ready(function() {
-        $('#header_nav').onePageNav();
+        $('#header_nav').onePageNav({
+            scrollSpeed: 2500
+        });
+
     });
 </script>
 </body>
