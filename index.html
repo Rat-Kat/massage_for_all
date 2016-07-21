@@ -20,26 +20,28 @@
 </head>
 
 <body>
-<header>
-    <div class="main_header container" >
+<header >
+    <div class="main_header container" id="header_nav" >
         <div class="header_logo">
             <p class="header_logo_main">МассажДляВсiх</p>
             <p class="header_logo_text">мастерская массажа на Соломенке</p>
         </div>
 
         <nav class="header_navbar" >
-                <a href="#first">Главная</a>
-                <a href="#services">Услуги и цены</a>
-                <a href="#about">О нас</a>
-                <a href="#comments">Отзывы</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contacts">Контакты</a>
+            <ul class="nav" >
+                <li class="current"><a href="#first" >Главная</a></li>
+                <li><a href="#services">Услуги и цены</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#comments">Отзывы</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
         </nav>
     </div>
 </header>
 
 
-<section class="first_block" id="first">
+<section class="first_block landingItem" id="first">
     <div class="first_block_slider">
         <ul>
             <li class="slider">
@@ -99,7 +101,7 @@
 </section>
 
 
-<section id="services">
+<section id="services" class="landingItem">
     <h2>Наши услуги и цены</h2>
     <div id="accordion" role="tablist" aria-multiselectable="true">
         <div id="massage" role="tab">
@@ -336,7 +338,7 @@
             <div class="services_block">
                 <img src="img/services_spa.jpg" class="services_img img-responsive" alt="spa">
                 <div class="services_spa services_text">
-                    <span class="services_title">Классический массаж</span>
+                    <span class="services_title">Spa процедуры</span>
                     <button class="services_btn" type="button" data-toggle="collapse" data-target="#services_spa" aria-expanded="false" aria-controls="services_spa">Подробнее</button>
                 </div>
             </div>
@@ -449,7 +451,7 @@
 </section>
 
 
-<section id="about">
+<section id="about" class="landingItem">
     <h2>О нас</h2>
     <div class="about_us container">
         <img src="img/about_us.jpg" class="about_main_img img-responsive" alt="Photo Yana and Lesya">
@@ -471,7 +473,7 @@
 </section>
 
 
-<section id="comments">
+<section id="comments" class="landingItem">
     <h2>Отзывы клиентов</h2>
     <div class="comments_all container">
         <div class="comment_one">
@@ -498,7 +500,7 @@
 
 </section>
 
-<section id="faq">
+<section id="faq" class="landingItem">
     <h2>Часто задаваемые вопросы</h2>
     <div class="container">
         <p class="faq_question">Какие есть противопоказания для массажа?</p>
@@ -522,7 +524,7 @@
 
 </section>
 
-<footer id="contacts">
+<footer id="contacts" class="landingItem">
     <div class="contacts_all">
         <div class="contacts_all_fon">
             <div class="container">
@@ -565,11 +567,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.js"></script>
-<script src="js/jquery.liLanding.js"></script>
+<script src="js/jquery.nav.js"></script>
 <script>
-    $(window).load(function(){
-        $('#scrollspy').liLanding();
-    })
+    $(document).ready(function() {
+        $('#header_nav').onePageNav();
+    });
 </script>
 </body>
 </html>
