@@ -8,7 +8,11 @@ body{
 
 header{
     width: 100%;
-    min-height: 80px;
+    height: 80px;
+}
+.container{
+    padding-right: 0px;
+    padding-left: 0px;
 }
 #header_nav{
     position: fixed;
@@ -16,23 +20,24 @@ header{
     left: 0;
     overflow: hidden;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(255, 255, 255);
     width: 100vw;
+
 }
 .main_header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    padding-top: 10px;
     padding-bottom: 10px;
 
 }
 .header_logo{
-    flex-grow: 1;
+    flex-grow: 0;
     flex-basis: 300px;
     text-align: left;
-
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-top: 20px;
 }
 .header_logo_main{
     font-size: 38px;
@@ -42,24 +47,28 @@ header{
 }
 .header_logo_text{
     margin: 0;
-    padding-left: 15px;
+    padding-left: 16px;
 }
 .header_navbar{
     flex-grow: 1;
-    flex-basis: 300px;
-    max-width: 700px;
-
+    flex-basis: 400px;
+    margin-right: 50px;
+    margin-left: 50px;
+    max-width: 800px;
+    padding-top: 20px;
 }
 ul{
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     text-align: center;
+}
+.nav li{
+    flex-basis: 110px;
+    flex-grow: 1;
 }
 .header_navbar a{
     color: #212121;
-    font-size: 16px;
+    font-size: 15px;
 }
 .header_navbar a:hover{
     color: #212121;
@@ -75,6 +84,10 @@ ul{
 a:focus, a:visited, a:hover{
     outline:none;
 }
+.nav > li > a{
+    padding-left: 0px;
+    padding-right: 0px;
+}
 .nav > li > a:hover,
 .nav > li > a:focus,
 .nav > li > a:visited,
@@ -88,7 +101,7 @@ a:focus, a:visited, a:hover{
 .first_block_slider{
     overflow: hidden;
     position: relative;
-    height: 85vh;
+    height: 40vw;
 }
 .first_block_slider ul {
     list-style:none;
@@ -223,7 +236,10 @@ h2{
 
 }
 .first_page_icons_col{
-    flex-basis: 230px;
+    flex-basis: 150px;
+    flex-grow: 1;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .first_page_icons_col div{
@@ -254,7 +270,7 @@ h2{
 .services_block{
     display: flex;
     flex-wrap: wrap;
-    min-height: 50vh;
+    min-height: 25vw;
 }
 .panel{
     margin: 0;
@@ -267,7 +283,6 @@ h2{
 .services_img{
     flex-basis: 350px;
     flex-grow: 1;
-    max-height: 350px;
 }
 .services_text{
     flex-basis: 350px;
@@ -314,7 +329,7 @@ h4{
     text-align: center;
 }
 .services_price{
-    width: 55vw;
+    width: 60vw;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -339,14 +354,14 @@ h4{
     text-align: left;
 }
 .services_price div div:first-child{
-    flex-basis: 300px;
+    flex-basis: 200px;
     flex-grow: 2;
 }
 .services_price_alone{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 55vw;
+    width: 60vw;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -361,7 +376,7 @@ h4{
     flex-basis: 400px;
     flex-grow: 1;
 }
-.services_price_value span{
+.services_price_value span:first-child{
     margin-right: 60px;
 }
 .services_duration{
@@ -451,9 +466,8 @@ h4{
     box-shadow: none;
 }
 .about_diploms img{
-    width: 150px;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 .comments_all{
     display: flex;
@@ -468,12 +482,13 @@ h4{
     flex-wrap: wrap;
 }
 .comments_block div{
-    flex-basis: 500px;
+    flex-basis: 300px;
+    flex-grow: 1;
     box-shadow: 2px 2px 8px 3px rgba(255, 186, 49, 0.8);
     padding: 30px;
     font-size: 12px;
     line-height: 1.2em;
-    margin: 30px;
+    margin: 25px;
 
 }
 .comments_all div img{
@@ -546,4 +561,70 @@ h4{
 }
 .contacts_socials a:active, .contacts_socials a:focus, .contacts_socials a:visited{
     outline:none;
+}
+@media (max-width: 820px) {
+
+}
+
+@media (max-width: 1024px) {
+    body{
+        font-size: 12px;
+    }
+    .header_logo_main{
+        font-size: 32px;
+    }
+    .header_logo_text{
+        font-size: 12px;
+    }
+    .header_navbar a{
+        font-size: 13px;
+    }
+    .header_navbar{
+        margin-left: 0px;
+        margin-right: 25px;
+    }
+    .header_logo{
+        margin-left: 25px;
+        margin-right: 0px;
+    }
+    .slider_text div{
+        font-size: 36px;
+    }
+    .slider_text a{
+        font-size: 18px;
+        padding-top: 10px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    .first_page_icons_col div{
+       width: 75px;
+        height: 75px;
+        font-size: 48px;
+    }
+    .first_page_icons_title{
+        font-size: 13px;
+    }
+    .first_page_icons_text{
+        font-size: 11px;
+    }
+    .services_title{
+        font-size: 22px;
+    }
+    .about_photos img{
+        height: 14vw;
+    }
+    #comments .container{
+        width: 95vw;
+    }
+    .services_price{
+        width: 75vw;
+    }
+    .services_price_alone{
+        width: 75vw;
+    }
+    #services_depilation .services_price{
+        width: 40vw;
+    }
+
 }
