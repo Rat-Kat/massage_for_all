@@ -35,8 +35,8 @@ header{
     justify-content: space-between;
     align-items: center;
     padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
     margin-right: auto;
     margin-left: auto;
 
@@ -308,7 +308,7 @@ h2{
 .services_img{
     flex-basis: 350px;
     flex-grow: 1;
-    height: 25vw;
+
 }
 .services_text{
     flex-basis: 350px;
@@ -388,6 +388,7 @@ h4{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     width: 60vw;
     margin-left: auto;
     margin-right: auto;
@@ -400,14 +401,14 @@ h4{
     padding-right: 35px;
 }
 .services_price_value{
-    flex-basis: 400px;
+    flex-basis: 200px;
     flex-grow: 1;
 }
 .services_price_value span:first-child{
     margin-right: 60px;
 }
 .services_duration{
-    flex-basis: 400px;
+    flex-basis: 200px;
     flex-grow: 1;
     text-align: right;
 }
@@ -416,6 +417,9 @@ h4{
 }
 #services_depilation .services_price{
     width: 30vw;
+}
+#services_depilation .services_price div{
+    flex-wrap: nowrap;
 }
 #services_depilation .services_price div span{
     flex-basis: 100px;
@@ -591,7 +595,25 @@ h4{
 .contacts_socials a:active, .contacts_socials a:focus, .contacts_socials a:visited{
     outline:none;
 }
-@media(max-width: 420px){
+@media (max-width: 420px) {
+    .container .servi12ces_price div{
+        text-align: center;
+    }
+    .services_price div{
+        justify-content: center;
+        text-align: center;
+    }
+    .services_price div div:nth-child(2){
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #d9d9d9;
+        margin-bottom: 5px;
+    }
+    .services_price div:last-child div:nth-child(2){
+        border: none;
+    }
+}
+@media(max-width: 620px){
     header{
         height: 120px;
     }
@@ -601,6 +623,12 @@ h4{
     }
     .first_block_slider{
         height: 50vw;
+    }
+    .first_page_icons .first_page_icons_col div{
+        width: 60px;
+        height: 60px;
+        font-size: 36px;
+        padding-top: 3px;
     }
     .slider img{
         height: 60vw;
@@ -613,15 +641,39 @@ h4{
         margin-bottom: 0;
         font-size: 24px;
     }
+    .panel .container{
+        width: 90vw;
+    }
+    .container .services_price{
+        width: 90vw;
+    }
+
     .navbar-toggle{
-        margin-top: 10px;
+        margin-top: 0;
+        margin-left: 0;
         margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
     }
     .services_img{
         height: 50vw;
     }
     .services_text{
         height: 50vw;
+    }
+    .services_price_alone{
+        text-align: center;
+    }
+    .services_price_alone div{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    #sugaring #services_depilation .services_price{
+        width: 70vw;
+    }
+    .services_price_alone div:first-child{
+        margin-bottom: 10px;
     }
     #figure_correction .services_block img{
         order: 1;
@@ -639,12 +691,12 @@ h4{
         justify-content: center;
     }
     .about_us img{
-        margin-right: 0;
+        margin-right: 10px;
         margin-bottom: 20px;
+        margin-left: 0;
     }
-    .about_us img{
-        margin-left: 0px;
-        margin-right: 0px;
+    .navbar-toggle{
+        float: none;
     }
 
     .contacts_all_fon .container div h4{
@@ -652,16 +704,13 @@ h4{
         margin-bottom: 10px;
     }
 }
-@media (max-width: 840px) {
+@media (max-width: 880px) {
     .header_navbar{
         width: 400px;
-    }
-    .header_navbar{
         padding-top: 0;
+        margin-top: 15px;
     }
-    .navbar-toggle{
-        float: none;
-    }
+
     .main_header{
         align-items: flex-start;
         flex-wrap: wrap;
