@@ -186,7 +186,23 @@ section{
     outline: none;
 
 }
-
+@keyframes animation_slides {
+    0% {
+        opacity:0;
+    }
+    6% {
+        opacity:1;
+    }
+    24% {
+        opacity:1;
+    }
+    30% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
 @-webkit-keyframes animation_slides {
     0% {
         opacity:0;
@@ -244,6 +260,15 @@ section{
     -moz-animation-delay: 0s;
     -moz-animation-play-state: running;
     -moz-animation-fill-mode: forwards;
+
+    animation-name: animation_slides;
+    animation-duration: 24s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
 }
 .slider:nth-child(2), .slider:nth-child(2) div{
     -webkit-animation-delay: 6s;
