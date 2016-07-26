@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>МассажДляВсiх</title>
+    <title>МасажДляВсiх</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/animation.css" rel="stylesheet">
@@ -26,19 +26,29 @@
     <div id="header_nav" >
         <div class="main_header">
             <div class="header_logo">
-                <p class="header_logo_main">МассажДляВсiх</p>
+                <p class="header_logo_main">МасажДляВсiх</p>
                 <p class="header_logo_text">мастерская массажа на Соломенке</p>
             </div>
 
             <nav class="header_navbar">
-                <ul class="nav" >
-                    <li class="current"><a href="#first" >Главная</a></li>
-                    <li><a href="#services">Услуги и цены</a></li>
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#comments">Отзывы</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
-                </ul>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav ">
+                        <li class="current"><a href="#first" >Главная</a></li>
+                        <li><a href="#services">Услуги и цены</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#comments">Отзывы</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </div>
@@ -107,13 +117,13 @@
 
 <section id="services">
     <h2>Наши услуги и цены</h2>
-    <div class="panel-group" id="accordion" aria-multiselectable="true">
+    <div class="panel-group" aria-multiselectable="true">
         <div id="massage" class="panel">
             <div class="services_block">
                 <img src="img/services_massage.jpg" class="services_img img-responsive" alt="woman in massage">
                 <div class="services_massage services_text">
                     <span class="services_title">Классический массаж</span>
-                    <button class="services_btn" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#services_massage" aria-expanded="false">Подробнее</button>
+                    <button class="services_btn" type="button" data-toggle="collapse" data-target="#services_massage" aria-expanded="false">Подробнее</button>
                 </div>
             </div>
             <div id="services_massage" class="container collapse" role="tabpanel" aria-labelledby="massage">
@@ -259,7 +269,7 @@
             <div class="services_block">
                 <div class="services_figure_correction services_text">
                     <span class="services_title">Коррекция фигуры</span>
-                    <button class="services_btn" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#services_figure_correction" aria-expanded="false" aria-controls="services_figure_correction">Подробнее</button>
+                    <button class="services_btn" type="button" data-toggle="collapse" data-target="#services_figure_correction" aria-expanded="false" aria-controls="services_figure_correction">Подробнее</button>
                 </div>
                 <img src="img/services_figure_correction.jpg" class="services_img img-responsive" alt="figure_correction">
             </div>
@@ -343,7 +353,7 @@
                 <img src="img/services_spa.jpg" class="services_img img-responsive" alt="spa">
                 <div class="services_spa services_text">
                     <span class="services_title">Spa процедуры</span>
-                    <button class="services_btn" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#services_spa" aria-expanded="false" aria-controls="services_spa">Подробнее</button>
+                    <button class="services_btn" type="button" data-toggle="collapse" data-target="#services_spa" aria-expanded="false" aria-controls="services_spa">Подробнее</button>
                 </div>
             </div>
             <div id="services_spa" class="container  collapse" role="tabpanel" aria-labelledby="spa">
@@ -396,7 +406,7 @@
             <div class="services_block">
                 <div class="services_depilation services_text">
                     <span class="services_title">Эпиляция</span>
-                    <button class="services_btn" type="button" data-toggle="collapse" data-parent="#accordion" data-target="#services_depilation" aria-expanded="false" aria-controls="services_depilation">Подробнее</button>
+                    <button class="services_btn" type="button" data-toggle="collapse" data-target="#services_depilation" aria-expanded="false" aria-controls="services_depilation">Подробнее</button>
                 </div>
                 <img src="img/services_depilation.jpg" class="services_img img-responsive" alt="sugaring">
             </div>
@@ -538,19 +548,19 @@
     <div class="container">
         <p class="faq_question">Какие есть противопоказания для массажа?</p>
         <p class="faq_answer">С наиболее полным списком противопоказаний Вы можете ознакомиться здесь. Массаж не делают при приступе высокого давления, высокой температуре, остром воспалительном процессе, онкологическом заболевании. Если у Вас есть сомнения, проконсультируйтесь с Вашим врачом.</p>
-
+        <br>
         <p class="faq_question">Будет ли мне больно во время массажа?</p>
         <p class="faq_answer">Обычно массаж проходит безболезненно. Массаж напряженных мышц вызывает легкую боль, но через некоторое время болезненность исчезает. Если Вы чувствуете боль во время массажа, сразу же скажите об этом массажисту.</p>
-
+        <br>
         <p class="faq_question">Когда появятся результаты массажа?</p>
         <p class="faq_answer">Ощутимые результаты Вы получите после нескольких сеансов массажа. В некоторых случаях  Вы получите результат сразу после первого сеанса. Вы ощутите прилив тепла, расслабление, уменьшение или полное исчезновение боли.</p>
-
+        <br>
         <p class="faq_question">Сколько сеансов массажа необходимо сделать?</p>
         <p class="faq_answer">Короткий курс массажа состоит из 10 сеансов, проводимых ежедневно или через день. Средний курс 12 сеансов. Максимальный курс 15 сеансов.</p>
-
+        <br>
         <p class="faq_question">Могу ли я есть перед массажем?</p>
         <p class="faq_answer">Желательно делать массаж не раньше, чем через 1 час после приема пищи.</p>
-
+        <br>
         <p class="faq_question">Как часто необходимо делать массаж?</p>
         <p class="faq_answer">Если Вы делаете массаж курсами, то повторять их можно через полгода или год. Если Вы хотите проводить массаж с профилактической целью, то можно делать массаж 1-2 раза в неделю непрерывно.</p>
     </div>
