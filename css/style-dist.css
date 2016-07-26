@@ -126,7 +126,7 @@ a:focus, a:visited, a:hover{
 .first_block_slider{
     overflow: hidden;
     position: relative;
-    height: 40vw;
+    min-height: 40vw;
 }
 .first_block_slider ul {
     list-style:none;
@@ -141,7 +141,7 @@ section{
 .slider_text{
     width: 33vw;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
     top: 0;
     left: 60%;
@@ -343,14 +343,17 @@ h2{
     margin: 0;
 }
 .services_img{
+    height: auto;
     -webkit-flex-basis: 350px;
         -ms-flex-preferred-size: 350px;
             flex-basis: 350px;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-
+    max-width: 50vw;
+    max-height: 25vw;
 }
+
 .services_text{
     -webkit-flex-basis: 350px;
         -ms-flex-preferred-size: 350px;
@@ -371,6 +374,7 @@ h2{
         -ms-flex-direction: column;
             flex-direction: column;
     font-family: "Roboto", sans-serif;
+    max-width: 50vw;
 }
 .services_title{
     font-size: 30px;
@@ -545,6 +549,7 @@ h4{
     width: 170px;
     margin-right: 50px;
     margin-left: 50px;
+    height: 100%;
 }
 .about_text{
     -webkit-flex-basis: 300px;
@@ -565,7 +570,7 @@ h4{
             flex-wrap: wrap;
 }
 .about_photos img{
-    height:15vw;
+    max-height:15vw;
     opacity: 1;
     vertical-align: top;
 
@@ -764,11 +769,14 @@ h4{
 }
 @media(max-width: 620px){
     header{
-        height: 120px;
+        height: 115px;
     }
     .main_header .header_logo{
         position: static;
         margin-left: 0;
+    }
+    .main_header{
+        padding-bottom: 0;
     }
     .first_block_slider{
         height: 50vw;
@@ -805,9 +813,11 @@ h4{
         padding-bottom: 0;
     }
     .services_img{
-        height: 50vw;
+        max-width: 100vw;
+        min-height: 50vw;
     }
     .services_text{
+        max-width: 100vw;
         height: 50vw;
     }
     .services_price_alone{
@@ -871,7 +881,7 @@ h4{
     .header_navbar{
         width: 400px;
         padding-top: 0;
-        margin-top: 15px;
+        margin-top: 5px;
     }
 
     .main_header{
