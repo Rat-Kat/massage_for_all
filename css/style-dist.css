@@ -221,23 +221,7 @@ section{
     }
 }
 
-@-moz-keyframes animation_slides {
-    0% {
-        opacity:0;
-    }
-    6% {
-        opacity:1;
-    }
-    24% {
-        opacity:1;
-    }
-    30% {
-        opacity:0;
-    }
-    100% {
-        opacity:0;
-    }
-}
+
 .slider{
     opacity:0;
     position:absolute;
@@ -245,42 +229,25 @@ section{
 
     -webkit-animation-name: animation_slides;
     -webkit-animation-duration: 24s;
-    -webkit-animation-timing-function: linear;
+    -webkit-animation-timing-function: ease-in;
     -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: normal;
-    -webkit-animation-delay: 0s;
-    -webkit-animation-play-state: running;
-    -webkit-animation-fill-mode: forwards;
-
-    -moz-animation-name: animation_slides;
-    -moz-animation-duration: 24s;
-    -moz-animation-timing-function: linear;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-direction: normal;
-    -moz-animation-delay: 0s;
-    -moz-animation-play-state: running;
-    -moz-animation-fill-mode: forwards;
 
     animation-name: animation_slides;
     animation-duration: 24s;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in;
     animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-delay: 0s;
-    animation-play-state: running;
-    animation-fill-mode: forwards;
 }
 .slider:nth-child(2), .slider:nth-child(2) div{
     -webkit-animation-delay: 6s;
-    -moz-animation-delay: 6s;
+    animation-delay: 6s;
 }
 .slider:nth-child(3), .slider:nth-child(3) div{
     -webkit-animation-delay: 12s;
-    -moz-animation-delay: 12s;
+    animation-delay: 12s;
 }
 .slider:nth-child(4), .slider:nth-child(4) div{
     -webkit-animation-delay: 18s;
-    -moz-animation-delay: 18s;
+    animation-delay: 18s;
 }
 h2{
     margin-top: 60px;
@@ -400,6 +367,7 @@ h2{
             flex-direction: column;
     font-family: "Roboto", sans-serif;
     max-width: 50vw;
+    min-height: 25vw;
 }
 .services_title{
     font-size: 30px;
@@ -410,7 +378,7 @@ h2{
 .services_btn{
     margin-top: 30px;
     margin-bottom: 20px;
-    background-color: inherit;
+    background-color: transparent;
     border: 1px solid #212121;
     width: 150px;
     height: 40px;
@@ -575,6 +543,7 @@ h4{
     margin-right: 50px;
     margin-left: 50px;
     height: 100%;
+
 }
 .about_text{
     -webkit-flex-basis: 300px;
@@ -583,6 +552,7 @@ h4{
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+
 }
 .about_photos{
     font-size: 0;
@@ -671,6 +641,7 @@ h4{
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+    width: 100%;
 }
 .comments_block div{
     -webkit-flex-basis: 300px;
@@ -769,6 +740,12 @@ h4{
     outline:none;
 }
 @media (max-width: 420px) {
+    .main_header .header_logo{
+        margin-left: -10px;
+    }
+    .header_navbar .navbar-toggle{
+        margin-right: 30px;
+    }
     .container .servi12ces_price div{
         text-align: center;
     }
@@ -794,14 +771,27 @@ h4{
 }
 @media(max-width: 620px){
     header{
-        height: 115px;
+        height: 80px;
     }
-    .main_header .header_logo{
-        position: static;
-        margin-left: 0;
+    .header_logo{
+        margin-left: 15px;
+        flex-basis: 350px;
+        position: absolute;
+        top:0;
+        left: 20px;
     }
     .main_header{
         padding-bottom: 0;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: right;
+        min-height: 80px;
+    }
+    .header_navbar{
+        align-self: center;
+
     }
     .first_block_slider{
         height: 50vw;
@@ -834,6 +824,7 @@ h4{
         margin-top: 0;
         margin-left: 0;
         margin-bottom: 0;
+        margin-right: 50px;
         padding-top: 0;
         padding-bottom: 0;
     }
@@ -910,25 +901,18 @@ h4{
     }
 
     .main_header{
-        -webkit-align-items: flex-start;
-            -ms-flex-align: start;
-                align-items: flex-start;
-        -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
         -webkit-justify-content: center;
             -ms-flex-pack: center;
                 justify-content: center;
-        width: 80vw;
         margin-right: auto;
         margin-left: auto;
     }
     .header_navbar ul li{
         margin-right: 0;
         margin-left: 0;
-        -webkit-flex-basis: 200px;
-            -ms-flex-preferred-size: 200px;
-                flex-basis: 200px;
+        -webkit-flex-basis: 120px;
+            -ms-flex-preferred-size: 120px;
+                flex-basis: 120px;
         -webkit-flex-grow: 1;
             -ms-flex-positive: 1;
                 flex-grow: 1;
@@ -939,18 +923,12 @@ h4{
         width: 55px;
         height: 40px;
     }
-    .header_logo{
-        width: 250px;
-        text-align: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
+
     .header_navbar{
         -webkit-flex-grow: 1;
             -ms-flex-positive: 1;
                 flex-grow: 1;
-        text-align: center;
+
     }
     #navbar{
         width: 100%;
