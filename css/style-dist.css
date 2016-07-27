@@ -1068,3 +1068,9 @@ h4{
     }
 
 }
+
+@font-face {
+    font-family: "VivaldiD CL";
+    src: local("VivaldiD CL"),
+    url('../font/VIVADCL.ttf');
+}
