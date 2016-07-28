@@ -191,6 +191,8 @@ section{
     top:23vw;
     left: 69%;
     z-index: 100;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -408,7 +410,9 @@ h2{
     height: 40px;
     font-size: 18px;
     position: relative;
-    transition:all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 .services_btn:active{
     outline: none;
@@ -801,7 +805,8 @@ h4{
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.copyright a{
+
+.copyright div:nth-child(2) a{
     color: #ffba31;
     font-weight: 600;
 }
