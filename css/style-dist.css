@@ -4,6 +4,7 @@ body{
     font-size: 14px;
     font-family: "Open Sans", sans-serif;
     position: relative;
+    width: 100%;
 }
 
 header{
@@ -21,8 +22,7 @@ header{
     overflow: hidden;
     z-index: 1000;
     background-color: rgb(255, 255, 255);
-    width: 100vw;
-
+    width: 100%;
 }
 .navbar-toggle .icon-bar{
     background-color: #212121;
@@ -41,10 +41,9 @@ header{
     -ms-flex-align: center;
     align-items: center;
     padding-bottom: 10px;
-    padding-left: 60px;
-    padding-right: 60px;
     margin-right: auto;
     margin-left: auto;
+    width: 90vw;
 
 }
 .header_logo{
@@ -92,15 +91,23 @@ header{
     margin-left: 10px;
     margin-right: 10px;
 }
-#navbar a:hover{
-    color: #212121;
-    text-decoration: none;
-}
+
 .nav .current a{
     text-decoration: none;
     border-top: 3px solid #ffba31;
     outline:none;
     background-color: inherit;
+    padding-top: 7px;
+}
+.nav a{
+    text-decoration: none;
+    outline:none;
+    background-color: inherit;
+}
+#navbar a:hover{
+    color: #212121;
+    text-decoration: none;
+    border-top: 3px solid #ffba31;
     padding-top: 7px;
 }
 a:focus, a:visited, a:hover{
@@ -112,6 +119,9 @@ a:focus, a:visited, a:hover{
     display: inline;
     color: #212121;
     font-size: 15px;
+    transition: 0.2s linear;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .nav > li > a:hover,
 .nav > li > a:focus,
@@ -164,8 +174,7 @@ section{
     font-size: 42px;
     font-family: "Roboto", sans-serif;
     color: #212121;
-    margin-top: -30px;
-    margin-bottom: 20px;
+    margin-bottom: 8vw;
 }
 
 .slider_btn{
@@ -179,28 +188,26 @@ section{
     color: #212121;
     padding-top: 8px;
     position: relative;
-    top:25vw;
+    top:23vw;
     left: 69%;
     z-index: 100;
+    transition: all 0.3s;
 }
 
 .slider_btn:hover{
     text-decoration: none;
     outline: none;
-    padding-top: 10px;
-    background-color: rgba(33, 33, 33, 0.5);
-    color: #fff;
-    border: none;
+    color: #212121;
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+
 }
 .slider_btn:focus{
     text-decoration: none;
     outline: none;
-    padding-top: 10px;
-    background-color: rgba(33, 33, 33, 0.5);
-    color: #fff;
-    border: none;
-    margin-top: 1px;
-    margin-left: 1px;
+    color: #212121;
+    margin-top: 2px;
 }
 @keyframes animation_slides {
     0% {
@@ -409,6 +416,9 @@ h2{
 }
 .services_btn:hover{
     outline: none;
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
 }
 .services_btn:focus{
     outline: none;
@@ -727,6 +737,7 @@ h4{
     flex-wrap: wrap;
     text-align: center;
     height: 100%;
+    width: 100vw;
 }
 .contacts_all_fon .container div{
     -webkit-flex-grow: 1;
@@ -737,15 +748,30 @@ h4{
             flex-basis: 190px;
     margin-bottom: 20px;
 }
+.contacts_socials a:first-child{
+    margin-left: 0;
+}
 .contacts_phones{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
 }
+
 .contacts_text{
-    width: 60px;
+    width: 50px;
+    font-size: 20px;
 }
-.contacts_socials a{
+.contacts_table_padding td{
+    padding-top: 5px;
+}
+.contacts_table_padding td a{
+    color: #212121;
+}
+.contacts_table_padding td a:hover, .contacts_table_padding td a:active{
+    outline:none;
+    color: #212121;
+}
+.contacts_icon{
     display: inline-block;
     width: 35px;
     height: 35px;
@@ -755,10 +781,30 @@ h4{
     margin-left: 15px;
     padding-top: 2px;
 }
-.contacts_socials a:active, .contacts_socials a:focus, .contacts_socials a:visited{
+.contacts_socials a:active, .contacts_socials a:focus, .contacts_socials a:hover{
     outline:none;
+    color: #fff;
+    background-color: #ffba31;
 }
-
+.contacts_map iframe{
+    width: 100%;
+    height: 230px;
+}
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90vw;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.copyright a{
+    color: #ffba31;
+    font-weight: 600;
+}
 @media (max-width: 420px) {
     .main_header .header_logo{
         margin-left: -10px;
@@ -769,8 +815,8 @@ h4{
     .first_block_slider .slider .slider_text div{
         font-size: 28px;
     }
-
-    .first_block_slider .slider .slider_text a{
+    .first_block .first_block_slider .slider_btn{
+        left: 33%;
         font-size: 14px;
         height: 35px;
         width: 120px;
@@ -834,6 +880,7 @@ h4{
     .first_block_slider{
         height: 50vw;
     }
+
     .first_page_icons .first_page_icons_col div{
         width: 60px;
         height: 60px;
@@ -848,9 +895,14 @@ h4{
         left: 0;
     }
     .slider_text div{
-        margin-bottom: 0;
+        margin-bottom: 25vw;
         font-size: 24px;
     }
+    .first_block_slider .slider_btn{
+        top: 28vw;
+        left: 35%;
+    }
+
     .panel .container{
         width: 90vw;
     }
@@ -874,8 +926,14 @@ h4{
         max-width: 100vw;
         height: 50vw;
     }
+    .services_price div{
+        padding-right: 5px;
+        padding-left: 5px;
+    }
     .services_price_alone{
         text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     .services_price_alone div{
         display: -webkit-flex;
@@ -884,7 +942,13 @@ h4{
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-flex-basis: 300px;
+        -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
 
+    }
+    .services_duration span:first-child{
+        margin-right:0;
     }
     #sugaring #services_depilation .services_price{
         width: 70vw;
@@ -985,6 +1049,9 @@ h4{
         padding-top: 0;
         padding-bottom: 0;
     }
+    .slider_btn{
+        left: 66%;
+    }
     .nav .current a{
         padding-top: 4px;
     }
@@ -1063,10 +1130,13 @@ h4{
         font-size: 34px;
         line-height: 1.1em;
     }
-    .slider_text a{
+    .slider_btn{
         font-size: 17px;
         height: 40px;
         width: 170px;
+        padding-top: 5px;
+    }
+    .slider_btn:hover, .slider_btn:active{
         padding-top: 5px;
     }
     h2{
