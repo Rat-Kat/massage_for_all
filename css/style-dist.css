@@ -168,23 +168,39 @@ section{
     margin-bottom: 20px;
 }
 
-.slider_text a{
+.slider_btn{
     display: block;
     width: 15vw;
     height: 50px;
     text-align: center;
     border: 1px solid #212121;
-    border-radius: 4px;
     font-size: 20px;
     font-family: "Roboto", sans-serif;
     color: #212121;
     padding-top: 8px;
-    margin-top: 30px;
+    position: relative;
+    top:25vw;
+    left: 69%;
+    z-index: 100;
 }
-.slider_text a:hover, .slider_text a:focus, .slider_text a:active{
+
+.slider_btn:hover{
     text-decoration: none;
     outline: none;
-
+    padding-top: 10px;
+    background-color: rgba(33, 33, 33, 0.5);
+    color: #fff;
+    border: none;
+}
+.slider_btn:focus{
+    text-decoration: none;
+    outline: none;
+    padding-top: 10px;
+    background-color: rgba(33, 33, 33, 0.5);
+    color: #fff;
+    border: none;
+    margin-top: 1px;
+    margin-left: 1px;
 }
 @keyframes animation_slides {
     0% {
@@ -384,9 +400,17 @@ h2{
     width: 150px;
     height: 40px;
     font-size: 18px;
-    border-radius: 3px;
+    position: relative;
+    transition:all 0.3s;
 }
-.services_btn:focus, .services_btn:active{
+.services_btn:active{
+    outline: none;
+    top: 2px;
+}
+.services_btn:hover{
+    outline: none;
+}
+.services_btn:focus{
     outline: none;
 }
 .services_massage{
